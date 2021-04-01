@@ -1,0 +1,53 @@
+.photos {
+  margin-top: 50px;
+  &-swiper {
+    padding-bottom: 40px !important;
+    &-slide__photo {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &-control {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 12px;
+    width: 260px;
+    margin: 0 auto;
+    &-btn-prev,
+    &-btn-next {
+      outline: none;
+      background: center/25px 25px url("../src/img/right.svg") no-repeat;
+    }
+    &-btn-prev {
+      transform: rotate(180deg);
+    }
+  }
+}
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  display: none;
+}
+.swiper-pagination-bullet {
+  width: 12px !important;
+  height: 12px !important;
+  background: $white !important;
+  border: 1px solid rgba(44, 62, 80, 0.3) !important;
+  margin-right: $font-main;
+  outline: none;
+  cursor: pointer;
+  @media all and (max-width: $mobile) {
+    width: 8px !important;
+    height: 8px !important;
+  }
+}
+.swiper-pagination-bullet-active {
+  background: $blue !important;
+}
+@media all and (max-width: $large) {
+  .btns {
+    display: none;
+  }
+}

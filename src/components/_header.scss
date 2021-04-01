@@ -1,0 +1,95 @@
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  &__hero {
+    width: 725px;
+    height: 696px;
+    background: top right url("../src/img/hero.png") no-repeat;
+    @media all and (max-width: $large) {
+      height: 256px;
+      background-size: 255px auto;
+      background-position: center;
+    }
+  }
+  &-title {
+    padding-top: 94px;
+    padding-left: 76px;
+    @media all and (max-width: $large) {
+      padding: 35px 10px 10px;
+      &__logo {
+        width: 145px;
+        height: 45px;
+      }
+    }
+  }
+  &-text {
+    margin-top: 62px;
+    max-width: 365px;
+  }
+  &-web {
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 147px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1018px;
+    width: 100%;
+    margin: 60px auto 0;
+    padding: 23px 89px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 2px 10px rgba(0, 58, 64, 0.2);
+    border-radius: 30px;
+    @media all and (max-width: $large) {
+      position: relative;
+      bottom: 0;
+      padding: 26px 40px;
+      justify-content: space-evenly;
+    }
+    &-link {
+      display: block;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 24px;
+      color: $black;
+      @media all and (max-width: $large) {
+        font-size: $font-main;
+        padding: 10px 0;
+      }
+    }
+    &-btn {
+      box-sizing: border-box;
+      width: 196px;
+      height: 48px;
+      margin-right: 50px;
+      background: $blue;
+      border-radius: 20px;
+      font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif, Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      font-size: 24px;
+      color: $white;
+      border: 1px solid transparent;
+      cursor: pointer;
+      @media all and (max-width: $large) {
+        width: 142px;
+        height: 35px;
+        font-size: 16px;
+        margin-right: 0;
+      }
+      &:focus,
+      &:hover {
+        outline: none;
+        background: $white;
+        border: 1px dashed $blue;
+        border-radius: 20px;
+        color: $blue;
+      }
+    }
+  }
+}

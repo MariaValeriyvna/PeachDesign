@@ -1,0 +1,51 @@
+.advantages {
+  @media all and (min-width: 1450px) {
+    margin-top: -170px;
+  }
+
+  &-swiper {
+    padding-bottom: 40px !important;
+    &-pagination {
+      display: none;
+    }
+    @media all and (max-width: 1500px) {
+      width: 290px;
+      &-pagination {
+        display: block;
+      }
+    }
+    @media all and (max-width: $large) {
+      width: 270px;
+    }
+    &-item {
+      width: 290px;
+      height: 416px !important;
+      padding: 100px 30px 30px 40px;
+      background: $white;
+      border: 1px solid rgba(136, 140, 140, 0.4);
+      box-sizing: border-box;
+      border-radius: 30px;
+      cursor: pointer;
+      @media all and (max-width: $large) {
+        width: 270px !important;
+        height: 380px !important;
+      }
+      &:focus,
+      &:hover {
+        background: $blue;
+        color: $white;
+      }
+    }
+  }
+}
+@each $pic in hat, frame, pingpong, tooth {
+  .item-#{$pic} {
+    background: $white
+      top
+      30px
+      left
+      40px
+      url("../src/img/#{$pic}.svg")
+      no-repeat;
+  }
+}

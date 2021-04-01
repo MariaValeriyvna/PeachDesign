@@ -1,0 +1,36 @@
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  height: 696px;
+  margin-top: -50px;
+  @media all and (max-width: 1450px) {
+    justify-content: space-evenly;
+    height: auto;
+    margin-top: 20px;
+  }
+  &__hero {
+    width: 524px;
+    height: 646px;
+    background: top left url("../src/img/pic-center.png") no-repeat;
+    @media all and (max-width: $large) {
+      height: 313px;
+      background-size: 254px auto;
+      background-position: center;
+    }
+  }
+  &-text {
+    max-width: 550px;
+    padding: 150px 50px 0;
+    @media all and (max-width: $large) {
+      padding: 45px 10px 65px;
+    }
+  }
+  &__title {
+    margin-top: 45px;
+    text-transform: uppercase;
+    &_coloredtext {
+      color: $blue;
+    }
+  }
+}

@@ -1,0 +1,53 @@
+.staff {
+  padding-top: 40px;
+  &-swiper {
+    padding-bottom: 40px !important;
+    &-pagination {
+      @media all and (min-width: $large) {
+        display: none;
+      }
+    }
+    &-slide {
+      box-sizing: border-box;
+      min-height: 500px;
+      padding: 85px 470px 10px 80px;
+      background: top right url("../src/img/director.png") no-repeat;
+      @media all and (max-width: $large) {
+        padding: 20px 10px 261px 10px;
+        background-position: bottom right;
+        background-size: 234px auto;
+      }
+    }
+    @media all and (max-width: 800px) {
+      &-pagination {
+        display: block;
+      }
+    }
+  }
+  &__text {
+    box-sizing: border-box;
+    max-width: 605px;
+  }
+  &-control {
+    position: absolute;
+    bottom: 116px;
+    left: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 12px;
+    width: 98px;
+    margin: 0 auto;
+    @media all and (max-width: $large) {
+      bottom: 20px;
+    }
+    &-btn-prev,
+    &-btn-next {
+      outline: none;
+      background: center/25px 25px url("../src/img/right.svg") no-repeat;
+    }
+    &-btn-prev {
+      transform: rotate(180deg);
+    }
+  }
+}

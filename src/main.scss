@@ -1,0 +1,46 @@
+@import "fonts.scss";
+@import "variables.scss";
+@import "./components/header";
+@import "./components/about";
+@import "./components/advantages";
+@import "./components/photos";
+@import "./components/staff";
+
+html {
+  scroll-behavior: smooth;
+}
+.body {
+  box-sizing: border-box;
+  position: relative;
+  max-width: 1506px;
+  margin: 0 128px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-size: $font-main;
+  color: $black;
+
+  @media all and (max-width: $large) {
+    margin: 0 25px;
+  }
+}
+.wrapper {
+  max-width: 1249px;
+  margin: 0 auto;
+  background: linear-gradient(
+    180deg,
+    #f5f5f5 0%,
+    rgba(245, 245, 245, 0) 70.67%
+  );
+}
+.text {
+  font-weight: normal;
+  font-size: $font-main;
+  @media all and (max-width: $large) {
+    font-size: 14px;
+  }
+}
+.title {
+  font-weight: bold;
+  font-size: 24px;
+}
